@@ -26,11 +26,31 @@ Before you start coding, let's build your robot!
 - What sensors and motors do you see on the XRP kit?
 - How do you connect the battery and main board?
 
+
 Take your time and make sure everything matches the diagrams. If something doesn't look right, check the documentation or ask a teammate!
 
 ---
 
-## 2. Install WPILib 2025
+## 2. Image Your XRP
+
+Now that your XRP kit is assembled, it's time to prepare the robot's onboard computer by "imaging" it. Imaging loads the necessary software so your XRP can run code you deploy from WPILib.
+
+- **Imaging Guide:** [Imaging Your XRP (WPILib Docs)](https://docs.wpilib.org/en/stable/docs/xrp-robot/hardware-and-imaging.html#imaging-your-xrp)
+
+Follow the instructions in the official documentation to download and flash the correct image onto your XRP. Make sure your robot is connected to your computer and powered on before starting.
+
+> Note: If you run into trouble, double-check your USB connections and make sure you're using the correct image file for your board (at the time of writing: xrp-wpilib-firmware-2.0.1-71a2f5a.uf2
+).
+
+**Questions to consider:**
+- What does "imaging" mean in the context of robotics?
+- How do you know the imaging process was successful?
+
+Once your XRP is imaged, you're ready to set up your programming environment!
+
+---
+
+## 3. Install WPILib 2025
 
 WPILib is the software you'll use to program your robot. Follow these steps:
 
@@ -39,7 +59,8 @@ WPILib is the software you'll use to program your robot. Follow these steps:
 	- Make sure you download version 2025.x.x or newer.
 2. **Install WPILib:**
 	- Follow the instructions for your operating system (Windows, Mac, Linux).
-	- If you run into issues, check the [Troubleshooting Section](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html#troubleshooting).
+	- If you run into issues, check the [Troubleshooting Section](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html#extracting-the-installer).
+    > Note: You do not need to do the steps for Additional C++ Installation for Simulation.
 
 **Questions to consider:**
 - What is WPILib used for?
@@ -49,17 +70,16 @@ WPILib is the software you'll use to program your robot. Follow these steps:
 
 ## 3. Create and Open the XRP Demo Project
 
-Let's get coding!
+Let's get coding! From here, you have two options: You can leverage the existing code on this repo, or if you'd like to set up the example project yourself, follow the following instructions:
 
-1. **Open WPILib:**
-2. Press `Ctrl + Alt + P` to open the command dropdown.
-3. Type `WPILib: Create Project` and select it.
-4. Choose:
+1. Press `Ctrl + Alt + P` to open the command dropdown.
+1. Type `WPILib: Create Project` and select it.
+1. Choose:
 	- Project Type: Example
 	- Language: Java
 	- Example: XRP Reference
-5. Select a folder and name your project (e.g., `xrp-demo`).
-6. Set your team number to `5492`.
+1. Select a folder and name your project (e.g., `xrp-demo`).
+1. Set your team number to `5492`.
 
 **Questions to consider:**
 - What files do you see in your new project?
@@ -67,15 +87,23 @@ Let's get coding!
 
 ---
 
-## 4. Deploy and Run the Code on Your Robot
 
-1. Connect your XRP robot to your computer (usually via USB).
-2. In WPILib, click the deploy button (looks like a robot icon) or use the command palette to deploy.
-3. Wait for the code to upload, then watch your robot come to life!
+## 4. Simulate and Run the Robot Code (Emulation)
 
-**Questions to consider:**
-- What does the robot do when you run the sample code?
-- Can you change something in the code and see what happens?
+> Note: This section is still being refined and will take some trial and error. If you run into any issues feel free to ask a mentor for help.
+
+Want to run the reference program without deploying to the robot? You can use WPILib's built-in robot simulation/emulation:
+
+1. **Open VS Code and make sure your reference project is loaded.**
+2. **Open the command palette (`Ctrl+Shift+P`) and select `WPILib: Simulate Robot Code`.**
+3. **Choose the simulation type (Java, Desktop, etc.) if prompted.**
+4. **Wait for the simulation to start.**
+	- The simulation window will appear, showing your robot's behavior.
+5. **Interact with the simulated robot using the provided controls.**
+
+This lets you test your code and see how the robot would behave, all without needing to deploy to hardware.
+
+For a visual walkthrough, see this video: [Running XRP Reference Program](https://www.youtube.com/watch?v=fjSQFVKx2Fg)
 
 ---
 
